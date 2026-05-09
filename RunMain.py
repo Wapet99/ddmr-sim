@@ -78,11 +78,11 @@ psiHist = xHist[4, :]
 
 fig, axs = plt.subplots(3, 3, figsize=(12, 8))
 axs[0, 0].plot(tHist, NHist)
-axs[0, 0].set_title('North position')
+axs[0, 0].set_title('North position [m]')
 axs[1, 0].plot(tHist, EHist)
-axs[1, 0].set_title('East position')
-axs[2, 0].plot(tHist, psiHist * 180 / np.pi)
-axs[2, 0].set_title('Yaw angle')
+axs[1, 0].set_title('East position [m]')
+axs[2, 0].plot(tHist, psiHist * 180 / np.pi) # convert from radians to degrees
+axs[2, 0].set_title('Yaw angle [deg]')
 
 plt.tight_layout()
 plt.show()
